@@ -2,9 +2,9 @@
 
 cmake_minimum_required(VERSION 3.5)
 
-file(GLOB HEADER_FILES *.h)
+file(GLOB HEADER_FILES Codes/*.h)
 
-file(GLOB SOURCE_FILES *.cpp)
+file(GLOB SOURCE_FILES Codes/*.cpp)
 
 add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES})
 

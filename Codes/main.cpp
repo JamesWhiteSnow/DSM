@@ -132,7 +132,7 @@ int main(int argc, char *argv[])
 	{
 		Initial_Cost += initial_cost[qid];
 	}
-	cout << "Average S-DSM Cost: " << NANOSECTOMSEC(Initial_Cost / query_num) << endl;
+	cout << "Average S-DSM Cost (ms): " << NANOSECTOMSEC(Initial_Cost / query_num) << endl;
 
 	if (edge_deletion == 0)
 	{
