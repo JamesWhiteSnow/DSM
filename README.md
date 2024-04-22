@@ -1,10 +1,19 @@
 # DSM
 
-In this project, we open-source the source code of our S-DSM/C-DSM approaches and upload the technical report of our paper (named "SIGMOD2025_Dynamic_Subgraph_Matching_Technical_Report.pdf").
+In this project, we open-source the source code of our S-DSM/C-DSM approaches and upload the technical report of our paper "Dynamic Subgraph Matching via Cost-Model-based Vertex Dominance Embeddings (Technical Report)".
 
-The real-world and default synthetic datasets used in our paper are stored in the datasets directory. As some synthetic datasets are large, we do not upload them. You can easily generate them by following the instructions in our paper.
+## Check List
 
-On Git Hub, we will introduce how to reproduce the results of our experiments.
+Technical Report ✔
+
+Data sets ✔
+
+Codes ✔
+
+Readme File ✔
+
+## Codes
+We will introduce how to reproduce the results of our experiments, where all parameters are set by their default values.
 
 1. Download the whole project.
 
@@ -29,6 +38,10 @@ make
 | :-----------: | ----------- | ----------- |
 | -d | data graph name | Syn-Uni, Syn-Gau, Syn-Zipf, Yeast, HPRD, DBLP, YouTube, USPatents|
 | -e | edge deletion | **0** for edge insertion, 1 for edge deletion |
+
+## Data Sets
+
+The real-world and default synthetic datasets used in our paper are stored in the datasets directory. As some synthetic datasets are large, we do not upload them. You can easily generate them by following the instructions in our paper.
 
 Note that, due to the upload size limitations, we compress the "data_graph.graph" and "initial_graph.graph" of USPatents data set. Thus, we need to decompress these two files as follows before using them:
 
