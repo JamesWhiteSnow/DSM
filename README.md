@@ -1,6 +1,6 @@
 # DSM
 
-In this project, we open-source the source code of our S-DSM/C-DSM approaches.
+In this project, we open-source the source code of our S-DSM/C-DSM approaches and upload the technical report of our paper (named "SIGMOD2025_Dynamic_Subgraph_Matching_Technical_Report.pdf").
 
 The real-world and default synthetic datasets used in our paper are stored in the datasets directory. As some synthetic datasets are large, we do not upload them. You can easily generate them by following the instructions in our paper.
 
