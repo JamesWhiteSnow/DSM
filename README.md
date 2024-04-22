@@ -29,3 +29,11 @@ make
 | :-----------: | ----------- | ----------- |
 | -d | data graph name | Syn-Uni, Syn-Gau, Syn-Zipf, Yeast, HPRD, DBLP, YouTube, USPatents|
 | -e | edge deletion | **0** for edge insertion, 1 for edge deletion |
+
+Note that, due to the upload size limitations, we compress the "data_graph.graph" and "initial_graph.graph" of USPatents data set. Thus, we need to decompress these two files as follows before using them:
+
+```
+cd Datasets/USPatents
+tar -xzvf data_graph.tar.gz
+tar -xzvf initial_graph.tar.gz
+```
