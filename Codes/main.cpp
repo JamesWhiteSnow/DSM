@@ -173,7 +173,7 @@ int main(int argc, char *argv[])
 		Continuous_Cost += continuous_cost[qid];
 	}
 
-	fout << "Query ID | Query Cost (ms)" << endl;
+	cout << "Query ID | Query Cost (ms)" << endl;
 	for (ui qid = 0; qid < query_num; qid++) {
 		cout << qid << " | " << NANOSECTOMSEC(initial_cost[qid]+continuous_cost[qid]) << endl;
 	}
