@@ -175,7 +175,7 @@ int main(int argc, char *argv[])
 
 	fout << "Query ID | Query Cost (ms)" << endl;
 	for (ui qid = 0; qid < query_num; qid++) {
-		fout << qid << " | " << NANOSECTOMSEC(initial_cost[qid]+continuous_cost[qid]) << endl;
+		cout << qid << " | " << NANOSECTOMSEC(initial_cost[qid]+continuous_cost[qid]) << endl;
 	}
 	cout << "Average Cost (ms): " << NANOSECTOMSEC((Initial_Cost + Continuous_Cost + Update_Cost) / query_num) << endl;
 
