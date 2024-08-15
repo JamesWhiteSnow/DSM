@@ -139,7 +139,7 @@ int main(int argc, char *argv[])
 	{
 		if (num_e_updates % 10000 == 0)
 		{
-			cout << "Update Edge Number: " << num_e_updates << endl;
+			cout << "Update Edge Number: " << num_e_updates << endl;	
 		}
 
 		InsertUnit insert = initial_graph.updates_.front();
@@ -166,6 +166,7 @@ int main(int argc, char *argv[])
 			num_e_updates++;
 		}
 	}
+	cout << "Update Edge Number: " << num_e_updates << endl;
 
 	for (ui qid = 0; qid < query_num; qid++)
 	{
