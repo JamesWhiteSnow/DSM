@@ -105,7 +105,6 @@ int main(int argc, char *argv[])
 	double candidates_num = 0;
 	double vertex_sum = 0;
 
-	cout << "S-DSM Query: " << endl;
 	for (ui qid = 0; qid < query_num; qid++)
 	{
 		string query_path = dataset_path + "query_graphs/" + "query_graph-" + to_string(qid) + ".graph";
@@ -123,16 +122,8 @@ int main(int argc, char *argv[])
 		time_ns_refinement[qid] = refineCandidates(static_data_graph, query_graphs[qid], data_vertices, query_vertices[qid]);
 
 		initial_cost[qid] = time_ns_preprocessing[qid] + time_ns_search[qid] + time_ns_refinement[qid];
-
-		cout << "Query ID: " << qid << " S-DSM Cost (ms): " << NANOSECTOMSEC(initial_cost[qid]) << endl;
 	}
 	delete static_data_graph;
-
-	for (ui qid = 0; qid < query_num; qid++)
-	{
-		Initial_Cost += initial_cost[qid];
-	}
-	cout << "Average S-DSM Cost (ms): " << NANOSECTOMSEC(Initial_Cost / query_num) << endl;
 
 	if (edge_deletion == 0)
 	{
@@ -144,7 +135,6 @@ int main(int argc, char *argv[])
 	}
 
 	ui num_e_updates = 0;
-	cout << "C-DSM Query: " << endl;
 	while (!initial_graph.updates_.empty())
 	{
 		if (num_e_updates % 10000 == 0)
@@ -179,9 +169,15 @@ int main(int argc, char *argv[])
 
 	for (ui qid = 0; qid < query_num; qid++)
 	{
+		Initial_Cost += initial_cost[qid];
 		Continuous_Cost += continuous_cost[qid];
 	}
-	cout << "Average C-DSM Cost (μs): " << NANOSECTOMSEC((Continuous_Cost + Update_Cost) / query_num / num_e_updates * 1000) << endl;
+
+	fout << "Query ID | Query Cost (ms)" << endl;
+	for (ui qid = 0; qid < query_num; qid++) {
+		fout << qid << " | " << NANOSECTOMSEC(initial_cost[qid]+continuous_cost[qid]) << endl;
+	}
+	cout << "Average Cost (ms): " << NANOSECTOMSEC((Initial_Cost + Continuous_Cost + Update_Cost) / query_num) << endl;
 
 	return 0;
 }
