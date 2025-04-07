@@ -1,12 +1,10 @@
 # DSM
 
-In this project, we open-source the source code of our DSM approach and upload the technical report of our paper "Dynamic Subgraph Matching via Cost-Model-based Vertex Dominance Embeddings (Technical Report)".
+In this project, we open-source the source code of our Dynamic Subgraph Matching (DSM) approach.
 
 ## Check List
 
 Readme File ✔
-
-Technical Report ✔
 
 Source Code ✔
 
