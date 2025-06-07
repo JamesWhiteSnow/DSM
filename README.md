@@ -1,6 +1,6 @@
 # DSM
 
-In this project, we open-source the source code of our Dynamic Subgraph Matching (DSM) approach.
+In this project, we open-source the source code and data sets of our Dynamic Vertex Dominance Embedding (DIVINE) approach for continuous subgraph matching.
 
 ## Check List
 
@@ -9,6 +9,8 @@ Readme File ✔
 Source Code ✔
 
 Real/Synthetic Graph Data Sets ✔
+
+Paper and Appendix ✔
 
 ## Source Code
 We will introduce how to reproduce the results of our experiments, where all parameters are set by their default values.
